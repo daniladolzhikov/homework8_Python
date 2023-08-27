@@ -32,8 +32,6 @@ def search_contact():
         print("Контакты не найдены.")
 
 
-import os
-
 def correction_contact(contact_filename):
     try:
         with open(contact_filename, 'r') as file:
@@ -64,3 +62,10 @@ def correction_contact(contact_filename):
     except FileNotFoundError:
         print("Контакт не найден.")
 
+
+def delete_contact(contact_filename):
+    try:
+        os.remove(contact_filename)
+        print("Контакт успешно удален.")
+    except FileNotFoundError:
+        print("Контакт не найден.")

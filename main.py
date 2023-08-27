@@ -1,4 +1,4 @@
-from loggers import add_contact, search_contact, correction_contact
+from loggers import add_contact, search_contact, correction_contact, delete_contact
 
 def main():
     while True:
@@ -6,7 +6,8 @@ def main():
         print("1. Добавить контакт")
         print("2. Поиск контакта")
         print("3. Изменить данные контакта")
-        print("4. Выйти")
+        print("4. Удалить контакт")
+        print("5. Выйти")
         choice = input("Выберите действие: ")
 
         if choice == '1':
@@ -17,6 +18,9 @@ def main():
             contact_filename = input("Введите имя файла контакта для изменения: ")
             correction_contact(contact_filename)
         elif choice == '4':
+            contact_filename = input("Введите имя файла контакта для удаления: ")
+            delete_contact(contact_filename)
+        elif choice == '5':
             break
         else:
             print("Некорректный выбор. Попробуйте снова.")
