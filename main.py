@@ -1,4 +1,4 @@
-from loggers import add_contact
+from loggers import add_contact, search_contact
 
 def main():
     while True:
